@@ -25,8 +25,7 @@
                     Путешествуйте с NASA
                 </h1>
                 <div class="margin-y-3 padding-x-9">
-                    <a id="modal-button" href="#modal" class="usa-button margin-right-0" aria-controls="modal"
-                        data-open-modal>Оставить
+                    <a href="#" class="usa-button margin-right-0" aria-controls="modal" data-open-modal>Оставить
                         заявку</a>
                 </div>
             </section>
@@ -146,96 +145,75 @@
             </div>
         </div>
     </footer>
-    <div id="modal" class="usa-modal" aria-labelledby="modal-heading" aria-describedby="modal-description">
-        <div class="usa-modal__content">
-
-            <form class="usa-modal__main">
-                <h2 id="modal-heading" class="usa-modal__heading">Расскажите о себе</h2>
-
-                <div class="usa-prose">
-                    <p id="modal-description">
-                        и отправьтесь в космос вместе с NASA!
-                    </p>
-                </div>
-
-                <fieldset class="usa-fieldset">
-                    <label class="usa-label" for="applicant-name">Ваше имя</label>
-                    <input id="input-name" class="usa-input" name="applicant-name" required />
-                </fieldset>
-                <fieldset class="usa-fieldset">
-                    <legend class="usa-legend">Выберите планеты, которые хотели бы посетить:</legend>
-                    <div class="usa-checkbox">
-                        <input id="mercury" class="usa-checkbox__input" type="checkbox" name="planets" value="mercury">
-                        <label class="usa-checkbox__label" for="mercury">Меркурий</label>
-                    </div>
-                    <div class="usa-checkbox">
-                        <input id="europa" class="usa-checkbox__input" type="checkbox" name="planets" value="europa">
-                        <label class="usa-checkbox__label" for="europa">Европа</label>
-                    </div>
-                    <div class="usa-checkbox">
-                        <input id="callisto" class="usa-checkbox__input" type="checkbox" name="planets"
-                            value="callisto">
-                        <label class="usa-checkbox__label" for="callisto">Каллисто</label>
-                    </div>
-                    <div class="usa-checkbox">
-                        <input id="ganymedes" class="usa-checkbox__input" type="checkbox" name="planets"
-                            value="ganymedes">
-                        <label class="usa-checkbox__label" for="ganymedes">Ганимед</label>
-                    </div>
-                    <div class="usa-checkbox">
-                        <input id="io" class="usa-checkbox__input" type="checkbox" name="planets" value="io">
-                        <label class="usa-checkbox__label" for="io">Ио</label>
-                    </div>
-                    <div class="usa-checkbox">
-                        <input id="yuggoth" class="usa-checkbox__input" type="checkbox" name="planets" value="yuggoth">
-                        <label class="usa-checkbox__label" for="yuggoth">Юггот</label>
-                    </div>
-                    <div class="usa-checkbox">
-                        <input id="ceres" class="usa-checkbox__input" type="checkbox" name="planets" value="ceres">
-                        <label class="usa-checkbox__label" for="ceres">Церера</label>
-                    </div>
-                </fieldset>
-                <fieldset class="usa-fieldset">
-
-                    <legend class="usa-legend">Выберите удобный способ оплаты:</legend>
-                    <div class="usa-radio">
-                        <input id="cash" class="usa-radio__input" type="radio" name="payment" value="cash"
-                            checked="checked">
-                        <label class="usa-radio__label" for="cash">Наличные</label>
-                    </div>
-                    <div class="usa-radio">
-                        <input id="btc" class="usa-radio__input" type="radio" name="payment" value="btc">
-                        <label class="usa-radio__label" for="btc">Bitcoin</label>
-                    </div>
-                    <div class="usa-radio">
-                        <input id="doge" class="usa-radio__input" type="radio" name="payment" value="doge">
-                        <label class="usa-radio__label" for="doge">Dogecoin</label>
-                    </div>
-                    <div class="usa-radio">
-                        <input id="chillim" class="usa-radio__input" type="radio" name="payment" value="chillim">
-                        <label class="usa-radio__label" for="chillim">Chillim</label>
-                    </div>
-                </fieldset>
-
-                <div class="usa-modal__footer">
-                    <ul class="usa-button-group">
-                        <li class="usa-button-group__item">
-                            <button class="usa-button" type="submit">Отправить заявку</button>
-                        </li>
-                    </ul>
-                </div>
-            </form>
-
-            <button type="button" class="usa-button usa-modal__close" aria-label="Close this window"
-                data-close-modal="">
-                <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-                    <use xlink:href="./assets/nasawds-3.0.177/img/sprite.svg#close"></use>
-                </svg>
-            </button>
-
+    <div class="popup">
+        <div class="popup--container">
+            <button class="popup--close" type="button"></button>
+            <h2 class="popup--title">Расскажите о себе</h2>
+            <p class="popup--subtitle">и отправьтесь в космос вместе с NASA!</p>
+            <form class="popup--request" name="request">
+                <input class="popup--item" type="text" id="name" placeholder="Ваше имя" name="name" required>
+            <h2 class="popup-choice--title">Выберите планеты, которые хотели бы посетить</h2>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form--pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Меркурий</span>
+            </label>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Венера</span>
+            </label>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Марс</span>
+            </label>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Юпитер</span>
+            </label>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Сатурн</span>
+            </label>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Уран</span>
+            </label>
+            <label>
+                <input class="popup--item" type="checkbox">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Нептун</span>
+            </label>
+            <h2>Выберите планеты, которые хотели бы посетить</h2>
+            <label>
+                <input class="popup--item" type="radio">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">наличные</span>
+            </label>
+            <label>
+                <input class="popup--item" type="radio">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Bitcoin</span>
+            </label>
+            <label>
+                <input class="popup--item" type="radio">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Dogecoin</span>
+            </label>
+            <label>
+                <input class="popup--item" type="radio">
+                <span class="form__pseudo-item form__pseudo-item_type_checkbox"></span>
+                <span class="form__label-text">Chillim</span>
+            </label>
+            <button class="popup__button" type="submit">Отправить заявку</button>
+        </form>
         </div>
-
-        <script src="assets/nasawds-3.0.177/js/uswds.min.js"></script>
+    </div>
+    <script src="assets/nasawds-3.0.177/js/uswds.min.js"></script>
 </body>
 
 </html>
